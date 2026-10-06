@@ -374,7 +374,7 @@ void setup() {
   delay(100);
 
   // --- Libreria NanoEdge ---
-  enum neai_state st = neai_anomalydetection_init();
+  enum neai_state st = neai_anomalydetection_init(true);
   if (st != NEAI_OK) {
     fatalError("init NanoEdge fallita", (int)st);
   }
@@ -391,8 +391,8 @@ void setup() {
     st = neai_anomalydetection_learn(dataBuffer);
 
     if (st != NEAI_OK &&
-        st != NEAI_NOT_ENOUGH_CALL_TO_LEARNING &&
-        st != NEAI_MINIMAL_RECOMMENDED_LEARNING_DONE) {
+        st != NEAI_LEARNING_DONE &&
+        st != NEAI_LEARNING_IN_PROGRESS) {
       fatalError("learn NanoEdge fallito", (int)st);
     }
 

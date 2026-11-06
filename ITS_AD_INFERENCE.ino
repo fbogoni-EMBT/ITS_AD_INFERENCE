@@ -1,4 +1,16 @@
 /*
+ * Project  : Anomaly detection tramite Edge AI
+ * File     : ITS_AD_INFERENCE.ino
+ * Title    : NanoEdge AI anomaly detection inference
+ * Author   : Fabrizio Bogoni
+ * Date     : 2026-11-06
+ * Hardware : Arduino UNO R4 WiFi + Modulino Movement (Qwiic) or analog mic
+ * Notes    : source in DATA_SOURCE, thresholds in ANOMALY_THRESHOLD (90)
+ *            and ANOMALY_FULL_LEVEL (50), filter in ANOMALY_FILTER_COUNT
+ * Revision : 01
+ */
+
+/*
  * ============================================================================
  *  Rilevamento anomalie con libreria NanoEdge AI (Anomaly Detection)
  *  Scheda:   Arduino UNO R4 WiFi
